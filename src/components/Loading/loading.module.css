@@ -1,0 +1,6 @@
+.loadingContainer {
+  display: table;
+  margin: 0 auto;
+  padding: 15em 0;
+  min-height: 100%;
+}

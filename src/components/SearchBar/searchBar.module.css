@@ -1,0 +1,41 @@
+.searchForm {
+  padding: 1em 3em;
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.selectSortBy {
+  padding: 0.3em 1em;
+  border-radius: 5%;
+  cursor: pointer;
+}
+
+.inputSearchWord {
+  border: 1px solid #bfbfbf;
+  border-radius: 3%;
+  padding: 0.3em 1em;
+  width: 80%;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.inputSearchWord::placeholder {
+  color: #bfbfbf;
+}
+
+.searchButton {
+  background-color: #262626;
+  border: none;
+  border-radius: 5%;
+  color: white;
+  padding: 0.3em 1em;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  width: 10%;
+  min-width: 100px;
+}
+
+.searchButton:hover {
+  background-color: #434343;
+}
