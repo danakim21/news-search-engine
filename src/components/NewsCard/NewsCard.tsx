@@ -1,7 +1,7 @@
-import React from 'react';
-import { Card } from 'antd';
-import styles from './newsCard.module.css';
-import notFoundImage from '../../assets/not-found.png';
+import React from "react";
+import { Card } from "antd";
+import styles from "./newsCard.module.css";
+import notFoundImage from "../../assets/not-found.png";
 
 export const NewsCard: React.FC<News> = ({
   title,
@@ -32,7 +32,7 @@ export const NewsCard: React.FC<News> = ({
         }
       >
         <p className={styles.details}>
-          [{publishedAt.slice(0, 10)}] {author ? author : 'Author unknown'},{' '}
+          [{publishedAt.slice(0, 10)}] {author ? author : "Author unknown"},{" "}
           {source.name}
         </p>
         <h3 className={styles.title}>{title}</h3>
@@ -40,11 +40,11 @@ export const NewsCard: React.FC<News> = ({
           {description
             ? description.length < 140
               ? description
-              : description.slice(0, 140) + '...'
+              : description.slice(0, 140) + "..."
             : content
             ? content.length < 140
               ? content
-              : content.slice(0, 140) + '...'
+              : content.slice(0, 140) + "..."
             : null}
         </p>
       </Card>

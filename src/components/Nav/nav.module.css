@@ -15,3 +15,7 @@
   text-transform: uppercase;
   color: black;
 }
+
+.noSignInButton {
+  display: none !important;
+}

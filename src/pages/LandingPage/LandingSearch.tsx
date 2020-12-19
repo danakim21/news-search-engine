@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { RouteComponentProps, withRouter } from 'react-router-dom';
-import { NewsCardDisplay } from '../../components/NewsCardDisplay/NewsCardDisplay';
-import { Loading } from '../../components/Loading/Loading';
-import PaginationDisplay from '../../components/PaginationDisplay/PaginationDisplay';
-import { API_KEY } from '../../constants';
-import axios from 'axios';
-import styles from './landingSearch.module.css';
+import React, { useState, useEffect } from "react";
+import { RouteComponentProps, withRouter } from "react-router-dom";
+import { NewsCardDisplay } from "../../components/NewsCardDisplay/NewsCardDisplay";
+import { Loading } from "../../components/Loading/Loading";
+import PaginationDisplay from "../../components/PaginationDisplay/PaginationDisplay";
+import { API_KEY } from "../../constants";
+import axios from "axios";
+import styles from "./landingSearch.module.css";
 
 interface Props {
   query: {
@@ -31,7 +31,7 @@ const LandingSearch: React.FC<Props & RouteComponentProps<PathParamProps>> = ({
   useEffect(() => {
     if (parseInt(page) > 5) {
       history.push({
-        pathname: '/',
+        pathname: "/",
         search: `?searchWord=${searchWord}&sortBy=${sortBy}&page=5`,
       });
       return;
@@ -49,12 +49,16 @@ const LandingSearch: React.FC<Props & RouteComponentProps<PathParamProps>> = ({
       .catch((err) => console.log(err));
   }, [query]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [page]);
+
   return (
     <>
       <div className={styles.displaySearch}>
         <p className={styles.displaySearchText}>
-          {resultCount?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} search
-          results for:{' '}
+          {resultCount?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} search
+          results for:{" "}
         </p>
         <h2 className={styles.displaySearchWord}>{searchWord}</h2>
       </div>

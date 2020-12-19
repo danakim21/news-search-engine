@@ -1,0 +1,87 @@
+.page {
+  display: flex;
+}
+
+.leftContainer {
+  flex: 1;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.leftContainer .backgroundImg {
+  width: 100%;
+  filter: brightness(20%);
+}
+
+.leftContainer .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 35px;
+  margin: 0;
+  padding: 0;
+}
+
+.rightContainer {
+  flex: 1;
+  padding: 2em;
+}
+
+.rightContainerContent {
+  padding: 2em 3em;
+}
+
+.heading {
+  margin: 0;
+}
+
+.text {
+  color: grey;
+  margin-bottom: 3em;
+  font-size: 13px;
+}
+
+.labelInputContainer {
+  margin-bottom: 1.5em;
+}
+
+.label {
+  display: block;
+  clear: both;
+  margin-bottom: 0.8em;
+}
+
+.input {
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #bfbfbf;
+  border-radius: 3%;
+  padding: 0.3em 1em;
+  margin-bottom: 0.5em;
+}
+
+.loginButton {
+  width: 100%;
+  border: none;
+  padding: 0.7em;
+  box-shadow: rgba(33, 33, 36, 0.2) 0px 7px 29px 0px;
+  border-radius: 8px;
+  margin-top: 1.5em;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  background-color: black;
+}
+
+.showAlert {
+  color: #db4437;
+  font-size: 13px;
+}
+
+.noAlert {
+  display: none;
+}
